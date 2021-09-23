@@ -77,7 +77,7 @@
       <div
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
       >
-        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+        <a href="syllabus" class="flex flex-wrap no-underline hover:no-underline">
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
             Syllabus
           
@@ -102,7 +102,7 @@
       <div
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
       >
-        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+        <a href="homework" class="flex flex-wrap no-underline hover:no-underline">
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
             Homework
           
@@ -127,7 +127,7 @@
       <div
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow text-center"
       >
-        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+        <a href="resources" class="flex flex-wrap no-underline hover:no-underline">
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
             Resources
           
