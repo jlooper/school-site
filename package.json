@@ -20,8 +20,10 @@
 	"type": "module",
 	"dependencies": {
 		"axios": "^0.21.4",
+		"read-excel-file": "^5.2.10",
 		"sheet2api-js": "^0.6.1",
 		"svelte-async-readable": "^4.0.2",
+		"xl-json": "^4.0.0",
 		"xmlhttprequest": "^1.8.0"
 	}
 }

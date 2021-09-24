@@ -1,11 +1,6 @@
 <script>
-  import { onMount } from "svelte";
   import { data } from "../stores.js";
-  let homeData = [];
-  onMount(async function () {
-    homeData = $data;
-    console.log(homeData);
-  });
+  $: homeData = $data[0];
 </script>
 
 <div class="pt-24">
@@ -82,11 +77,11 @@
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
       >
         <a
-          href="syllabus"
+          href="penfriends"
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            Syllabus
+            {homeData.Box1Header}
 
             <p class="text-gray-800 text-base px-6 m-5">
               {homeData.Box1Content}
@@ -113,11 +108,11 @@
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
       >
         <a
-          href="homework"
+          href="vocabulary"
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            Homework
+            {homeData.Box2Header}
 
             <p class="text-gray-800 text-base px-6 m-5">
               {homeData.Box2Content}
@@ -142,11 +137,11 @@
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow text-center"
       >
         <a
-          href="resources"
+          href="francophonie"
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            Resources
+            {homeData.Box3Header}
 
             <p class="text-gray-800 text-base px-6 m-5">
               {homeData.Box3Content}
