@@ -1,25 +1,29 @@
 <script>
-  import { data } from '../stores.js';
+  import { onMount } from "svelte";
+  import { data } from "../stores.js";
+  let homeData = [];
+  onMount(async function () {
+    homeData = $data;
+    console.log(homeData);
+  });
 </script>
 
-
 <div class="pt-24">
- <div
+  <div
     class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
   >
     <div
       class="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left"
     >
       <h1 class="my-4 text-5xl font-bold leading-tight">
-        {$data[0].ClassTitle}
+        {homeData.ClassTitle}
       </h1>
       <p class="leading-normal text-4xl mb-8">
-        { $data[0].PageHeader }, { $data[0].TeacherName }
+        {homeData.PageHeader}, {homeData.TeacherName}
       </p>
       <p class="leading-normal text3xl mb-8">
-        { $data[0].PageBodyContent }
+        {homeData.PageBodyContent}
       </p>
-      
     </div>
     <div class="w-full md:w-2/5 py-6">
       <img alt="two french folks" class="h-full z-50" src="couple.png" />
@@ -68,22 +72,27 @@
 
 <section class="bg-white border-b py-8">
   <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-  
     <div class="w-full mb-4">
       <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
     </div>
-    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink text-center">
+    <div
+      class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink text-center"
+    >
       <div
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
       >
-        <a href="syllabus" class="flex flex-wrap no-underline hover:no-underline">
+        <a
+          href="syllabus"
+          class="flex flex-wrap no-underline hover:no-underline"
+        >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
             Syllabus
-          
-          <p class="text-gray-800 text-base px-6 m-5">
-            { $data[0].Box1Content }
-          </p>
-        </a>
+
+            <p class="text-gray-800 text-base px-6 m-5">
+              {homeData.Box1Content}
+            </p>
+          </div></a
+        >
       </div>
       <div
         class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
@@ -97,18 +106,24 @@
         </div>
       </div>
     </div>
-    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink text-center">
+    <div
+      class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink text-center"
+    >
       <div
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
       >
-        <a href="homework" class="flex flex-wrap no-underline hover:no-underline">
+        <a
+          href="homework"
+          class="flex flex-wrap no-underline hover:no-underline"
+        >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
             Homework
-          
-          <p class="text-gray-800 text-base px-6 m-5">
-            { $data[0].Box2Content }
-          </p>
-        </a>
+
+            <p class="text-gray-800 text-base px-6 m-5">
+              {homeData.Box2Content}
+            </p>
+          </div></a
+        >
       </div>
       <div
         class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
@@ -126,14 +141,18 @@
       <div
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow text-center"
       >
-        <a href="resources" class="flex flex-wrap no-underline hover:no-underline">
+        <a
+          href="resources"
+          class="flex flex-wrap no-underline hover:no-underline"
+        >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
             Resources
-          
-          <p class="text-gray-800 text-base px-6 m-5">
-            { $data[0].Box3Content }
-          </p>
-        </a>
+
+            <p class="text-gray-800 text-base px-6 m-5">
+              {homeData.Box3Content}
+            </p>
+          </div></a
+        >
       </div>
       <div
         class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
@@ -186,12 +205,8 @@
   </g>
 </svg>
 <section class="container mx-auto text-center py-6 mb-12">
-  
   <div class="w-full mb-4">
     <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
   </div>
-  <h3 class="my-4 text-xl leading-tight">
-    &copy; 2021 The Bonnie School
-  </h3>
- 
+  <h3 class="my-4 text-xl leading-tight">&copy; 2021 The Bonnie School</h3>
 </section>
