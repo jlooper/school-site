@@ -1,12 +1,15 @@
+<script context=module>
+  import { classes, getClassById } from "../stores.js";
+  getClassById(4);
+</script>
+
 <script>
-  import { data } from "../stores.js";
-  $: aboutData = $data[4];
+  export const aboutClass = classes;
 </script>
 
 <div class="bg-white h-full p-24 text-black">
   <h1 class="my-2 text-5xl font-bold leading-tight">
-    {aboutData.PageTitle}
+    {$aboutClass.pagetitle}
   </h1>
-  <p class="text-2xl">{@html aboutData.PageBodyContent}</p>
+  <p class="text-2xl">{@html $aboutClass.pagebodycontent}</p>
 </div>
-

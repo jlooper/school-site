@@ -1,12 +1,37 @@
-import axios from "axios";
 import { writable } from "svelte/store";
-import { asyncReadable } from "svelte-async-readable";
 
-export const data = asyncReadable(writable(null), {
-  dataProvider: () =>
-    axios
-      //.get("https://pokeapi.co/api/v2/ability/1/")
-      .get("https://sheet2api.com/v1/uBvRjCzBSkWY/french-class-101/")
-      .then((response) => response.data),
-});
-data.fetch().catch(() => console.error("oops, something went wrong"));
+export const classes = writable([]);
+const classDetails = {};
+let loaded = false;
+
+/*export const fetchClasses = async () => {
+  if (loaded) return;
+  const url = `https://sheetlabs.com/UML/classApi`;
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data)
+  const loadedClass = data.map((data, index) => ({
+    classTitle: data.ClassTitle,
+    index: index,
+    pageTitle: data.PageTitle,
+    pageId: data.PageId,
+    pageBodyContent: data.PageBodyContent
+  }));
+  classes.set(loadedClass);
+  loaded = true;
+};*/
+
+export const getClassById = async (id) => {
+  if (classDetails[id]) return classDetails[id];
+
+  try {
+    const url = `https://sheetlabs.com/UML/classApi`;
+    const res = await fetch(url);
+    const data = await res.json();
+    classDetails[id] = data[id];
+    classes.set(classDetails[id]);
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+};

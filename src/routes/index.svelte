@@ -1,6 +1,9 @@
-<script>
-  import { data } from "../stores.js";
-  $: homeData = $data[0];
+<script context=module>
+  import { classes, getClassById } from "../stores.js";
+  getClassById(0);
+</script>
+<script>  
+export const homeClass = classes;
 </script>
 
 <div class="pt-24">
@@ -11,13 +14,13 @@
       class="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left"
     >
       <h1 class="my-4 text-5xl font-bold leading-tight">
-        {homeData.ClassTitle}
+        {$homeClass.classtitle}
       </h1>
       <p class="leading-normal text-4xl mb-8">
-        {homeData.PageHeader}, {homeData.TeacherName}
+        {$homeClass.pageheader}, {$homeClass.teachername}
       </p>
       <p class="leading-normal text3xl mb-8">
-        {homeData.PageBodyContent}
+        {$homeClass.pagebodycontent}
       </p>
     </div>
     <div class="w-full md:w-2/5 py-6">
@@ -81,10 +84,10 @@
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            {homeData.Box1Header}
+            {$homeClass.box1header}
 
             <p class="text-gray-800 text-base px-6 m-5">
-              {homeData.Box1Content}
+              {$homeClass.box1content}
             </p>
           </div></a
         >
@@ -112,10 +115,10 @@
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            {homeData.Box2Header}
+            {$homeClass.box2header}
 
             <p class="text-gray-800 text-base px-6 m-5">
-              {homeData.Box2Content}
+              {$homeClass.box2content}
             </p>
           </div></a
         >
@@ -141,10 +144,10 @@
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            {homeData.Box3Header}
+            {$homeClass.box3header}
 
             <p class="text-gray-800 text-base px-6 m-5">
-              {homeData.Box3Content}
+              {$homeClass.box3content}
             </p>
           </div></a
         >
