@@ -7,6 +7,7 @@
   export const aboutClass = classes;
 </script>
 
+
 <div class="bg-white h-full p-24 text-black">
   <h1 class="my-2 text-5xl font-bold leading-tight">
     {$aboutClass.pagetitle}
