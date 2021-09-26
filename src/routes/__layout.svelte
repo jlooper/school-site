@@ -80,4 +80,4 @@
 <!--<Sidebar bind:open/>
 <Navbar bind:sidebar={open}/>-->
 
-<slot />
+<div class="h-screen"><slot /></div>

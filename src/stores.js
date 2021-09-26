@@ -23,7 +23,7 @@ let loaded = false;
 
 export const getClassById = async (id) => {
   //if (classDetails[id]) return classDetails[id];
-  if (loaded) return classDetails[id];
+  if (loaded) return classes;
   try {
     const url = `https://sheetlabs.com/UML/classApi`;
     const res = await fetch(url);
