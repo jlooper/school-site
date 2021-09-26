@@ -22,15 +22,14 @@ let loaded = false;
 };*/
 
 export const getClassById = async (id) => {
-  //if (classDetails[id]) return classDetails[id];
-  if (loaded) return classes;
+  if (classDetails[id]) return classDetails[id];
+
   try {
     const url = `https://sheetlabs.com/UML/classApi`;
     const res = await fetch(url);
     const data = await res.json();
     classDetails[id] = data[id];
     classes.set(classDetails[id]);
-    loaded = true;
   } catch (err) {
     console.error(err);
     return null;
