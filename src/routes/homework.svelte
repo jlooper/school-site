@@ -1,15 +1,23 @@
 <script context=module>
-  import { classes, getClassById } from "../stores.js";
-  getClassById(5);
+  export async function load({ fetch }) {
+    const res = await fetch(
+      "https://sheetlabs.com/UML/classApi?pageroute=homework"
+    );
+    if (res.ok) return { props: { homeworkClass: await res.json() } };
+    return {
+      status: res.status,
+      error: new Error(),
+    };
+  }
 </script>
 
 <script>
-  export const hwClass = classes;
+  export let homeworkClass;
 </script>
 
 <div class="bg-white h-full p-24 text-black">
   <h1 class="my-2 text-5xl font-bold leading-tight">
-    {$hwClass.pagetitle}
+    {homeworkClass[0].pagetitle}
   </h1>
-  <p class="text-2xl">{@html $hwClass.pagebodycontent}</p>
+  <p class="text-2xl">{@html homeworkClass[0].pagebodycontent}</p>
 </div>

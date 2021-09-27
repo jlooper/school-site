@@ -1,10 +1,12 @@
+// trouble making this work!
+
 import { writable } from "svelte/store";
 
 export const classes = writable([]);
 const classDetails = {};
 let loaded = false;
 
-/*export const fetchClasses = async () => {
+export const fetchClasses = async () => {
   if (loaded) return;
   const url = `https://sheetlabs.com/UML/classApi`;
   const res = await fetch(url);
@@ -19,7 +21,7 @@ let loaded = false;
   }));
   classes.set(loadedClass);
   loaded = true;
-};*/
+};
 
 export const getClassById = async (id) => {
   if (classDetails[id]) return classDetails[id];

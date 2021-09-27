@@ -1,9 +1,18 @@
 <script context=module>
-  import { classes, getClassById } from "../stores.js";
-  getClassById(0);
+  export async function load({ fetch }) {
+    const res = await fetch(
+      "https://sheetlabs.com/UML/classApi?pageroute=home"
+    );
+    if (res.ok) return { props: { homeClass: await res.json() } };
+    return {
+      status: res.status,
+      error: new Error(),
+    };
+  }
 </script>
-<script>  
-export const homeClass = classes;
+
+<script>
+  export let homeClass;
 </script>
 
 <div class="pt-24">
@@ -14,13 +23,13 @@ export const homeClass = classes;
       class="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left"
     >
       <h1 class="my-4 text-5xl font-bold leading-tight">
-        {$homeClass.classtitle}
+        {homeClass[0].classtitle}
       </h1>
       <p class="leading-normal text-4xl mb-8">
-        {$homeClass.pageheader}, {$homeClass.teachername}
+        {homeClass[0].pageheader}, {homeClass[0].teachername}
       </p>
       <p class="leading-normal text3xl mb-8">
-        {$homeClass.pagebodycontent}
+        {homeClass[0].pagebodycontent}
       </p>
     </div>
     <div class="w-full md:w-2/5 py-6">
@@ -84,10 +93,10 @@ export const homeClass = classes;
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            {$homeClass.box1header}
+            {homeClass[0].box1header}
 
             <p class="text-gray-800 text-base px-6 m-5">
-              {$homeClass.box1content}
+              {homeClass[0].box1content}
             </p>
           </div></a
         >
@@ -115,10 +124,10 @@ export const homeClass = classes;
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            {$homeClass.box2header}
+            {homeClass[0].box2header}
 
             <p class="text-gray-800 text-base px-6 m-5">
-              {$homeClass.box2content}
+              {homeClass[0].box2content}
             </p>
           </div></a
         >
@@ -144,10 +153,10 @@ export const homeClass = classes;
           class="flex flex-wrap no-underline hover:no-underline"
         >
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
-            {$homeClass.box3header}
+            {homeClass[0].box3header}
 
             <p class="text-gray-800 text-base px-6 m-5">
-              {$homeClass.box3content}
+              {homeClass[0].box3content}
             </p>
           </div></a
         >

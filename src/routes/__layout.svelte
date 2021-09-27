@@ -1,8 +1,18 @@
+<script context="module">
+  export const load = async ({ page }) => ({
+    props: {
+      key: page.path,
+    },
+  });
+</script>
+
 <script>
   import "../app.postcss";
   //import Navbar from '../components/Navbar.svelte'
-	//import Sidebar from '../components/Sidebar.svelte'
+  //import Sidebar from '../components/Sidebar.svelte'
   //let open = false;
+  import PageTransition from "../components/PageTransition.svelte";
+  export let key;
 </script>
 
 <nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
@@ -18,18 +28,15 @@
       </a>
     </div>
     <div class="block lg:hidden pr-4">
-      <button >
-        
-        <svg width=32 height=24>
-         <line id="top" x1=0 y1=2 x2=32 y2=2/>
-         <line id="middle" x1=0 y1=12 x2=24 y2=12/>
-         <line id="bottom" x1=0 y1=22 x2=32 y2=22/>
+      <button>
+        <svg width="32" height="24">
+          <line id="top" x1="0" y1="2" x2="32" y2="2" />
+          <line id="middle" x1="0" y1="12" x2="24" y2="12" />
+          <line id="bottom" x1="0" y1="22" x2="32" y2="22" />
         </svg>
       </button>
     </div>
-    
-    
-    
+
     <div
       class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
       id="nav-content"
@@ -80,4 +87,6 @@
 <!--<Sidebar bind:open/>
 <Navbar bind:sidebar={open}/>-->
 
-<div class="h-screen"><slot /></div>
+<PageTransition refresh={key}>
+  <div class="h-screen"><slot /></div>
+</PageTransition>
