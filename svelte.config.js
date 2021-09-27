@@ -5,7 +5,13 @@ import adapter from "@sveltejs/adapter-netlify";
 const config = {
   kit: {
     adapter: adapter(),
-    target: "#svelte"
+    target: "#svelte",
+    prerender: {
+      crawl: true,
+      enabled: true,
+      onError: 'continue',
+      pages: ["*"],
+    },
   },
 
   preprocess: [
