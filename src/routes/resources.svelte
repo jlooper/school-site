@@ -1,4 +1,4 @@
-<script context=module>
+<script context="module">
   export async function load({ fetch }) {
     const res = await fetch(
       "https://sheetlabs.com/UML/classApi?pageroute=resources"

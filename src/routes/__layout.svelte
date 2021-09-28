@@ -89,5 +89,7 @@
 <Navbar bind:sidebar={open}/>-->
 
 <PageTransition refresh={key}>
-  <div class="h-screen"><slot /></div>
+  <div class="body h-screen"><slot /></div>
 </PageTransition>
+
+

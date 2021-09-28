@@ -1,4 +1,4 @@
-<script context=module>
+<script context="module">
   export async function load({ fetch }) {
     const res = await fetch(
       "https://sheetlabs.com/UML/classApi?pageroute=home"
@@ -106,11 +106,11 @@
       >
         <div class="flex items-center justify-center">
           <a
-          href="penfriends"
+            href="penfriends"
             class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
             Go
-        </a>
+          </a>
         </div>
       </div>
     </div>
@@ -138,11 +138,11 @@
       >
         <div class="flex items-center justify-center">
           <a
-          href="vocabulary"
+            href="vocabulary"
             class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
             Go
-        </a>
+          </a>
         </div>
       </div>
     </div>
@@ -168,11 +168,11 @@
       >
         <div class="flex items-center justify-center">
           <a
-          href="francophonie"
+            href="francophonie"
             class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
             Go
-        </a>
+          </a>
         </div>
       </div>
     </div>
@@ -218,5 +218,5 @@
   <div class="w-full mb-4">
     <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
   </div>
-  <h3 class="my-4 text-xl leading-tight">&copy; 2021 The Bonnie School</h3>
+  <h3 class="my-4 text-xl leading-tight">&copy; 2021 Current College</h3>
 </section>
