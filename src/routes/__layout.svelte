@@ -87,6 +87,7 @@
 
 <Sidebar bind:open/>
 <Navbar bind:sidebar={open}/>
+		 <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
 
 <PageTransition refresh={key}>
   <div class="body h-screen"><slot /></div>

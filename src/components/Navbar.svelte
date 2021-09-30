@@ -5,7 +5,7 @@
 	export let sidebar = false
 </script>
 
-<header class="flex justify-between bg-blue-700 p-2 items-center text-white border-b-2">
+<header class="flex justify-between p-2 items-center text-white ">
 	<nav class="flex">
       
 		<Hamburger bind:open={sidebar}/>
@@ -15,7 +15,10 @@
       >
         🇫🇷 Français 101
       </a>
+	  	
+
 	</nav>
-	
+
 	<Menu class="lg:w-auto hidden"/>
+
 </header>

@@ -1,13 +1,12 @@
 <script>
   export let open = false;
-  import Menu from "./Menu.svelte";
 </script>
 
 <aside
   class="pt-20 absolute w-full h-full bg-blue-700 border-r-2 shadow-lg"
   class:open
 >
-  <ul class="list-reset lg:flex justify-end flex-1 items-center">
+  <ul class="uppercase list-reset lg:flex justify-end flex-1 items-center">
     <li class="mr-3">
       <a
         class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4"
