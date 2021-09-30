@@ -2,6 +2,9 @@
 ## ...run off of a spreadsheet converted to an API!
 
 🇫🇷 Welcome to this sample French language teacher's web site! 🇫🇷
+
+> Visit the deployed site here: [Sample School Site](https://sample-french-class.netlify.app)
+
 ### A Proof of Concept
 
 This project demonstrates an interesting architecture that might work well for a teacher who needs a bespoke web site for a class but doesn't want to pay for Wix or other paid sites. In addition, there's no fancy backend needed - it runs from a Google or Excel spreadsheet using a service called [Sheetlabs](https://sheetlabs.com) that allows a teacher to upload a spreadsheet and edit it within the service. An API (Application Programming Interface) is created by Sheetlabs (which has a generous free tier) and the user can use the API to query the spreadsheet a one would a database. Neat-o!
