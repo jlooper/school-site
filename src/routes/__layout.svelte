@@ -8,14 +8,14 @@
 
 <script>
   import "../app.postcss";
-  //import Navbar from '../components/Navbar.svelte'
-  //import Sidebar from '../components/Sidebar.svelte'
-  //let open = false;
+  import Navbar from '../components/Navbar.svelte'
+  import Sidebar from '../components/Sidebar.svelte'
+  let open = false;
   import PageTransition from "../components/PageTransition.svelte";
   export let key;
 </script>
 
-<nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
+<!--<nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
   <div
     class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
   >
@@ -83,10 +83,10 @@
     </div>
   </div>
   <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
-</nav>
+</nav>-->
 
-<!--<Sidebar bind:open/>
-<Navbar bind:sidebar={open}/>-->
+<Sidebar bind:open/>
+<Navbar bind:sidebar={open}/>
 
 <PageTransition refresh={key}>
   <div class="body h-screen"><slot /></div>

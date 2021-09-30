@@ -2,7 +2,7 @@
 	export let open = false
 </script>
 
-<button class="text-white hover:text-white cursor-pointer mr-4 border-none focus:outline-none" class:open on:click={() => open = !open}>
+<button class="text-white hover:text-white cursor-pointer mr-4 border-none focus:outline-none block lg:hidden" class:open on:click={() => open = !open}>
 	<svg width=32 height=24>
 		<line id="top" x1=0 y1=2  x2=32 y2=2/>
 		<line id="middle" x1=0 y1=12 x2=24 y2=12/>

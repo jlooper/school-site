@@ -1,5 +1,4 @@
 <script>
-	//import Logo from './Logo.svelte'
 	import Hamburger from './Hamburger.svelte'
 	import Menu from './Menu.svelte'
 	
@@ -18,5 +17,5 @@
       </a>
 	</nav>
 	
-	<Menu/>
+	<Menu class="lg:w-auto hidden"/>
 </header>

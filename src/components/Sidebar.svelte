@@ -1,21 +1,59 @@
 <script>
-	export let open = false
+  export let open = false;
+  import Menu from "./Menu.svelte";
 </script>
 
-<aside class="absolute w-full h-full bg-blue-700 border-r-2 shadow-lg" class:open>
-	<nav class="p-12 text-xl">
-		<a class="block" href="#about">About</a>
-		<a class="block" href="#contact">Contact</a>
-	</nav>
+<aside
+  class="pt-20 absolute w-full h-full bg-blue-700 border-r-2 shadow-lg"
+  class:open
+>
+  <ul class="list-reset lg:flex justify-end flex-1 items-center">
+    <li class="mr-3">
+      <a
+        class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4"
+        href="/about">About</a
+      >
+    </li>
+    <li class="mr-3">
+      <a
+        class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4"
+        href="syllabus">Syllabus</a
+      >
+    </li>
+    <li class="mr-3">
+      <a
+        class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4"
+        href="homework">Homework</a
+      >
+    </li>
+    <li class="mr-3">
+      <a
+        class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4"
+        href="grading">Grading</a
+      >
+    </li>
+    <li class="mr-3">
+      <a
+        class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4"
+        href="resources">Resources</a
+      >
+    </li>
+    <li class="mr-3">
+      <a
+        class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4"
+        href="community">Community</a
+      >
+    </li>
+  </ul>
 </aside>
 
 <style>
-	aside {
-		left: -100%;
-		transition: left 0.3s ease-in-out
-	}
-	
-	.open {
-		left: 0
-	}
+  aside {
+    left: -100%;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .open {
+    left: 0;
+  }
 </style>
