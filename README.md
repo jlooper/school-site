@@ -7,7 +7,7 @@
 
 ### A Proof of Concept
 
-This project demonstrates an interesting architecture that might work well for a teacher who needs a bespoke web site for a class but doesn't want to pay for Wix or other paid sites. In addition, there's no fancy backend needed - it runs from a Google or Excel spreadsheet using a service called [Sheetlabs](https://sheetlabs.com) that allows a teacher to upload a spreadsheet and edit it within the service. An API (Application Programming Interface) is created by Sheetlabs (which has a generous free tier) and the user can use the API to query the spreadsheet a one would a database. Neat-o!
+This project demonstrates an interesting architecture that might work well for a teacher who needs a bespoke web site for a class but doesn't want to pay for Wix or other paid sites. In addition, there's no fancy backend needed - it runs from a Google or Excel spreadsheet using a service called [Sheetlabs](https://sheetlabs.com) that allows a teacher to upload a spreadsheet and edit it within the service. An API (Application Programming Interface) is created by Sheetlabs (which has a generous free tier) and the user can use the API to query the spreadsheet just like one would a database. Neat-o!
 
 In addition, since this site is stored on [GitHub](https://github.com) and deployed on [Netlify](https://netlify.com), we can leverage these platforms as community-building tools. On GitHub, we use Discussion boards (see the tab at the top here) right in the repo for open discussions. Netlify offers form input storage. All these services are free to use.
 
@@ -59,6 +59,8 @@ npm run build
 
 ## Todo
 
-Make this even more flexible by making all elements connected to spreadsheets
+Make this even more flexible by making all elements connected to spreadsheets, including site color and logo
+
+Make adding routes more automated (right now, you add a file with the route's name, like About.svelte, to the /src folder but in that file there's a little bit of code to configure
 
 Redo the architecture around calling the API (currently it's done on each page which wastes API calls) - this should be run via stores.js.
