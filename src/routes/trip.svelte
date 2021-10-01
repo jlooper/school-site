@@ -2,7 +2,7 @@
   export const prerender = true;
 </script>
 
-<div class="bg-white h-full p-24 text-black">
+<div class="bg-white h-full p-10 text-black">
   <h1 class="my-2 text-5xl text-black font-bold leading-tight">
     2022 Class Trip
   </h1>

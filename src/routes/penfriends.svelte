@@ -2,8 +2,10 @@
   export const prerender = true;
 </script>
 
-<div class="bg-white h-full p-24 text-black">
-  <h1 class="my-2 text-5xl text-black font-bold leading-tight">Connecting Pen-Friends</h1>
+<div class="bg-white h-full p-10 text-black">
+  <h1 class="my-2 text-5xl text-black font-bold leading-tight">
+    Connecting Pen-Friends
+  </h1>
   <p class="text-2xl">
     Pen-friends help you with your language skills. Find a Francophone
     pen-friend by filling out this form.
@@ -17,7 +19,7 @@
     class="bg-gray-100 mt-5 shadow-md rounded px-8 pt-6 pb-8 mb-4"
   >
     <input type="hidden" name="form-name" value="pen-friend" />
-    <input type="hidden"  name="bot-field" />
+    <input type="hidden" name="bot-field" />
     <div class="mb-4">
       <label class="block text-gray-700 text-lg font-bold mb-2" for="username">
         Name
