@@ -15,7 +15,7 @@
   export let syllabusClass;
 </script>
 
-<div class="bg-white h-full p-10 text-black">
+<div class="bg-white h-screen p-10 text-black">
   <h1 class="my-2 text-5xl font-bold leading-tight">
     {syllabusClass[0].pagetitle}
   </h1>

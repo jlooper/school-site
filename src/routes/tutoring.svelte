@@ -2,7 +2,7 @@
   export const prerender = true;
 </script>
 
-<div class="bg-white h-full p-10 text-black">
+<div class="bg-white h-screen p-10 text-black">
   <h1 class="my-2 text-5xl text-black font-bold leading-tight">Tutoring</h1>
   <p class="text-2xl">
     Do you need a little extra help? Sign up to be matched with a private tutor
