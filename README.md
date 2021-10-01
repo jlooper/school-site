@@ -27,6 +27,7 @@ To setup your own classroom web site using this template:
 - [x]  Contact Us (form)
 - [x]  Discussion board (goes to GitHub)
 - [x]  Weekly Fiches de vocabulaire
+- [x]  Weekly Slideshow (YouTube embed)
 - [x]  Tutoring information (form)
 - [x]  About the Francophone world
 - [x]  Pen-friend Signup (form)
@@ -35,6 +36,7 @@ To setup your own classroom web site using this template:
 3. Connect your web site to your API by editing the route pages where the API path is embedded.
 
 > A note about forms: the forms are all built into the site and data is collected on Netlify. This site is setup for deployment on Netlify.
+> 
 ## Tech Stack
 
 Learn about everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
