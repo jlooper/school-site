@@ -27,6 +27,7 @@ To setup your own classroom web site using this template:
 - [x]  Contact Us (form)
 - [x]  Discussion board (goes to GitHub)
 - [x]  Weekly Fiches de vocabulaire
+- [x]  Weekly Slideshow (bespoke YouTube embed)
 - [x]  Tutoring information (form)
 - [x]  About the Francophone world
 - [x]  Pen-friend Signup (form)
