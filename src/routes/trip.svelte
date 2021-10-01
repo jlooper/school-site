@@ -1,15 +1,25 @@
 <script context="module">
-  export const prerender = true;
+  export async function load({ fetch }) {
+    const res = await fetch(
+      "https://sheetlabs.com/UML/classApi?pageroute=trip"
+    );
+    if (res.ok) return { props: { tripClass: await res.json() } };
+    return {
+      status: res.status,
+      error: new Error(),
+    };
+  }
+</script>
+
+<script>
+  export let tripClass;
 </script>
 
 <div class="bg-white h-screen p-10 text-black">
-  <h1 class="my-2 text-5xl text-black font-bold leading-tight">
-    2022 Class Trip
+  <h1 class="my-2 text-5xl font-bold leading-tight">
+    {tripClass[0].pagetitle}
   </h1>
-  <p class="text-2xl">
-    This Spring we will visit the beautiful city of Montreal in Quebec, Canada.
-    Sign up here to register for the trip and receive an information packet.
-  </p>
+  <p class="text-2xl">{@html tripClass[0].pagebodycontent}</p>
 
   <form
     name="tutoring"

@@ -21,7 +21,7 @@ To setup your own classroom web site using this template:
 - [x]  Grading
 - [x]  Homework
 - [x]  Syllabus
-- [x]  Class Trip Info (form)
+- [x]  Class Trip Info (form and video)
 - [x]  Alignments
 - [x]  Resources
 - [x]  Contact Us (form)
@@ -35,6 +35,8 @@ To setup your own classroom web site using this template:
 3. Connect your web site to your API by editing the route pages where the API path is embedded.
 
 > A note about forms: the forms are all built into the site and data is collected on Netlify. This site is setup for deployment on Netlify.
+
+> A note about the Discussion boards. For students, if there is a desire to keep the discussions private, you can make the repo private and invite the students individually or as a group to join. Discussions are held openly to avoid trolling/bullying.
 ## Tech Stack
 
 Learn about everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
