@@ -88,10 +88,7 @@
       <div
         class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
       >
-        <a
-          href="penfriends"
-          class="flex flex-wrap no-underline hover:no-underline"
-        >
+        <a href="slides" class="flex flex-wrap no-underline hover:no-underline">
           <div class="w-full font-bold text-2xl text-gray-800 px-6">
             {homeClass[0].box1header}
 
@@ -106,7 +103,7 @@
       >
         <div class="flex items-center justify-center">
           <a
-            href="penfriends"
+            href="slides"
             class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
             Go
@@ -214,4 +211,3 @@
     </g>
   </g>
 </svg>
-
