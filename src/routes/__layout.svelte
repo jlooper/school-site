@@ -10,6 +10,7 @@
   import "../app.postcss";
   import Navbar from "../components/Navbar.svelte";
   import Sidebar from "../components/Sidebar.svelte";
+  import Footer from "../components/Footer.svelte";
   let open = false;
   import PageTransition from "../components/PageTransition.svelte";
   export let key;
@@ -22,3 +23,5 @@
 <PageTransition refresh={key}>
   <slot />
 </PageTransition>
+
+<Footer />
